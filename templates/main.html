@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}} | My Brand</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="/" class="logo">My Brand</a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/index.html">Blog</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section for Home Page -->
+  {{#if isHome}}
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to My Brand</h1>
+      <p>A beautiful static site built with simplicity and performance in mind. Delivering content that matters, with style.</p>
+      <div>
+        <a href="/blog/index.html" class="btn">Read the Blog</a>
+        <a href="/contact.html" class="btn btn-secondary">Contact Me</a>
+      </div>
+    </div>
+  </section>
+  {{/if}}
+
+  <main class="container">
+    {{content}}
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About</h3>
+          <p>My Brand is a showcase of modern web development using simple yet powerful tools to create beautiful static websites.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/blog/index.html">Blog</a>
+            <a href="/about.html">About</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="/contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Newsletter</h3>
+          <p>Stay updated with the latest articles and news.</p>
+          <div class="newsletter">
+            <form id="newsletter-form" action="#" method="POST">
+              <input type="email" name="email" placeholder="Your email" required>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 My Brand. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html> 
