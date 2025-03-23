@@ -12,6 +12,8 @@
   --border-radius: 8px;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
+  --font-primary: 'Helvetica Neue', Arial, sans-serif;
+  --font-secondary: 'Arial', sans-serif;
 }
 
 * {
@@ -21,7 +23,7 @@
 }
 
 body {
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-primary);
   line-height: 1.7;
   color: var(--text-color);
   background: var(--bg-color);
