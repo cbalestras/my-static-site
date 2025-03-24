@@ -12,8 +12,10 @@ dirs.forEach(dir => {
 
 // Create a simple favicon SVG
 const faviconSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <circle cx="50" cy="50" r="40" fill="#3a86ff" />
-  <circle cx="50" cy="50" r="25" fill="#ff006e" />
+  <rect x="20" y="20" width="60" height="60" rx="3" fill="#2e3440" />
+  <rect x="30" y="40" width="40" height="4" rx="1" fill="#88c0d0" />
+  <rect x="30" y="50" width="30" height="4" rx="1" fill="#88c0d0" />
+  <rect x="30" y="60" width="20" height="4" rx="1" fill="#88c0d0" />
 </svg>`;
 fs.writeFileSync('dist/favicon.svg', faviconSVG);
 
@@ -115,6 +117,11 @@ function copyStaticAssets() {
     fs.readdirSync('assets/images').forEach(file => {
       fs.copyFileSync(`assets/images/${file}`, `dist/images/${file}`);
     });
+  }
+  
+  // Copy favicon if it exists in assets/img
+  if (fs.existsSync('assets/img/favicon.svg')) {
+    fs.copyFileSync('assets/img/favicon.svg', 'dist/favicon.svg');
   }
 }
 
